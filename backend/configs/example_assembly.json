@@ -1,0 +1,11 @@
+{
+  "assembly_name": "shaft_flange_assembly",
+  "export_modes": ["assembly", "multibody"],
+  "parts": [
+    { "id": "shaft1",  "type": "shaft",  "parameters": { "diameter": 20, "length": 100 } },
+    { "id": "flange1", "type": "flange", "parameters": { "inner_diameter": 40 } }
+  ],
+  "connections": [
+    ["shaft1.right_end", "flange1.back_center"]
+  ]
+}

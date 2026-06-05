@@ -1,0 +1,80 @@
+/* ========================================
+   PARAMETER FORM — Professional Tool Interface
+   ======================================== */
+
+.parameter-form {
+  background: var(--surface-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  padding: var(--sp-5);
+  margin-bottom: var(--sp-5);
+}
+
+.parameter-form-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-4);
+  padding-bottom: var(--sp-3);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.parameter-form-header-icon {
+  color: var(--text-secondary);
+}
+
+.parameter-form h2 {
+  font-size: 14px;
+}
+
+/* ─── FORM GRID ─── */
+.form-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--sp-4);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  margin-bottom: var(--sp-1);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: space-between;
+}
+
+.field-unit {
+  color: var(--text-tertiary);
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.input-wrapper input {
+  width: 100%;
+}
+
+.placeholder-text {
+  text-align: center;
+  color: var(--text-tertiary);
+  padding: var(--sp-6) var(--sp-4);
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.placeholder-text svg {
+  color: var(--glass-border-hover);
+  width: 32px;
+  height: 32px;
+}

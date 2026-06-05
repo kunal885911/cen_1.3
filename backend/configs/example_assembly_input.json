@@ -1,0 +1,24 @@
+{
+  "assembly_name": "Colored_Drive_Assembly",
+  "parts": [
+    {
+      "id": "main_shaft",
+      "type": "shaft",
+      "parameters": {
+        "diameter": 40,
+        "length": 150
+      }
+    },
+    {
+      "id": "end_flange",
+      "type": "flange",
+      "parameters": {
+        "inner_diameter": 40
+      }
+    }
+  ],
+  "connections": [
+    ["main_shaft.right_end", "end_flange.back_center"]
+  ],
+  "export_modes": ["assembly"]
+}

@@ -1,0 +1,296 @@
+/* ========================================
+   DESIGN SYSTEM — Premium Industrial Dark
+   CAD Automation System
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ─── THEME TOKENS — DARK (default) ─── */
+:root,
+[data-theme="dark"] {
+  /* Backgrounds */
+  --bg-primary:   #0d0e12;
+  --bg-secondary: #14151a;
+  --bg-tertiary:  #1b1d24;
+  --bg-grid:      rgba(255, 255, 255, 0.02);
+
+  /* Glass surfaces */
+  --glass-bg:          rgba(255, 255, 255, 0.02);
+  --glass-bg-hover:    rgba(255, 255, 255, 0.04);
+  --glass-bg-active:   rgba(255, 255, 255, 0.06);
+  --glass-border:      rgba(255, 255, 255, 0.06);
+  --glass-border-hover:rgba(255, 255, 255, 0.12);
+  --glass-blur:        8px;
+
+  /* Text hierarchy */
+  --text-primary:   #e2e4e9;
+  --text-secondary: #9499a3;
+  --text-tertiary:  #636873;
+  --text-muted:     #40444d;
+
+  /* Accent — Muted Steel Blue (Professional) */
+  --accent-primary:        #2b6cb0;
+  --accent-primary-hover:  #3182ce;
+  --accent-primary-active: #2c5282;
+  --accent-primary-subtle: rgba(43, 108, 176, 0.1);
+  --accent-primary-border: rgba(43, 108, 176, 0.3);
+
+  /* Semantic */
+  --color-success:     #38a169;
+  --color-success-dim: #2f855a;
+  --color-success-bg:  rgba(56, 161, 105, 0.1);
+
+  --color-error:     #e53e3e;
+  --color-error-dim: #c53030;
+  --color-error-bg:  rgba(229, 62, 62, 0.1);
+
+  /* Surfaces */
+  --surface-card:         rgba(255, 255, 255, 0.015);
+  --surface-input:        rgba(0, 0, 0, 0.2);
+  --surface-input-focus:  rgba(0, 0, 0, 0.4);
+  --surface-input-hover:  rgba(0, 0, 0, 0.3);
+
+  /* Shadows (Darker, non-glowing) */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.8);
+
+  /* Radii (Sharper for industrial precision) */
+  --radius-xs: 2px;
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 6px;
+  --radius-xl: 10px;
+
+  /* 8px spacing grid */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-7: 32px;
+  --sp-8: 40px;
+  --sp-9: 48px;
+  --sp-10: 64px;
+
+  /* Transitions */
+  --t-fast:  150ms ease-in-out;
+  --t-base:  250ms ease-in-out;
+
+  /* Noise */
+  --noise-opacity: 0.02;
+}
+
+/* ─── THEME TOKENS — LIGHT ─── */
+[data-theme="light"] {
+  --bg-primary:   #f7fafc;
+  --bg-secondary: #edf2f7;
+  --bg-tertiary:  #e2e8f0;
+  --bg-grid:      rgba(0, 0, 0, 0.03);
+
+  --glass-bg:          rgba(255, 255, 255, 0.8);
+  --glass-bg-hover:    rgba(255, 255, 255, 0.9);
+  --glass-bg-active:   #ffffff;
+  --glass-border:      rgba(0, 0, 0, 0.1);
+  --glass-border-hover:rgba(0, 0, 0, 0.15);
+  --glass-blur:        12px;
+
+  --text-primary:   #1a202c;
+  --text-secondary: #4a5568;
+  --text-tertiary:  #718096;
+  --text-muted:     #a0aec0;
+
+  --accent-primary:        #3182ce;
+  --accent-primary-hover:  #2b6cb0;
+  --accent-primary-active: #2c5282;
+  --accent-primary-subtle: rgba(49, 130, 206, 0.05);
+  --accent-primary-border: rgba(49, 130, 206, 0.3);
+
+  --color-success:     #38a169;
+  --color-success-dim: #2f855a;
+  --color-success-bg:  rgba(56, 161, 105, 0.05);
+
+  --color-error:     #e53e3e;
+  --color-error-dim: #c53030;
+  --color-error-bg:  rgba(229, 62, 62, 0.05);
+
+  --surface-card:        rgba(255, 255, 255, 0.9);
+  --surface-input:       #ffffff;
+  --surface-input-focus: #ffffff;
+  --surface-input-hover: #f7fafc;
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.1);
+
+  --noise-opacity: 0;
+}
+
+/* ─── GLOBAL RESET ─── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.5;
+  transition: background-color var(--t-base), color var(--t-base);
+  position: relative;
+}
+
+/* Very subtle grain texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: var(--noise-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── TYPOGRAPHY ─── */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+p { color: var(--text-secondary); }
+
+/* ─── FORM ELEMENTS ─── */
+input[type="number"],
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xs);
+  font-size: 13px;
+  font-family: 'JetBrains Mono', monospace;
+  transition: all var(--t-fast);
+  background: var(--surface-input);
+  color: var(--text-primary);
+  outline: none;
+}
+
+input[type="number"]::placeholder,
+input[type="text"]::placeholder {
+  color: var(--text-tertiary);
+  font-family: 'Inter', sans-serif;
+}
+
+input[type="number"]:hover:not(:disabled),
+input[type="text"]:hover:not(:disabled),
+select:hover:not(:disabled) {
+  border-color: var(--glass-border-hover);
+  background: var(--surface-input-hover);
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+select:focus {
+  border-color: var(--accent-primary);
+  background: var(--surface-input-focus);
+}
+
+input:disabled,
+select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Hide number spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; }
+input[type="number"] { -moz-appearance: textfield; }
+
+/* ─── BUTTON SYSTEM ─── */
+button {
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  font-size: 13px;
+  transition: all var(--t-fast);
+}
+
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn {
+  padding: var(--sp-2) var(--sp-4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+}
+
+.btn-primary {
+  background: var(--accent-primary);
+  color: #FFF;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent-primary-hover);
+}
+.btn-primary:active:not(:disabled) {
+  background: var(--accent-primary-active);
+}
+
+.btn-secondary {
+  background: var(--surface-card);
+  color: var(--text-primary);
+  border: 1px solid var(--glass-border);
+}
+.btn-secondary:hover:not(:disabled) {
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
+}
+
+.btn-large {
+  padding: var(--sp-3) var(--sp-6);
+  font-size: 14px;
+}
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--text-tertiary);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
+
+::selection { background: var(--accent-primary-border); color: var(--text-primary); }
+
+/* ─── ACCESSIBILITY ─── */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+  border-radius: inherit;
+}
