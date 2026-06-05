@@ -1,0 +1,184 @@
+{
+  "assembly_name": "Assembly Machine",
+  "description": "9-part complex assembly machine with rotating wheel mechanism",
+  "components": [
+    {
+      "id": "base_plate",
+      "name": "Base Plate",
+      "part_number": "PART-01",
+      "type": "base_plate",
+      "parameters": {
+        "length": 500.0,
+        "width": 300.0,
+        "height": 20.0,
+        "hole_diameter": 9.0
+      },
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "quantity": 1
+    },
+    {
+      "id": "support_block_front",
+      "name": "Support Block (Front)",
+      "part_number": "PART-02",
+      "type": "support_block",
+      "parameters": {
+        "length": 100.0,
+        "width": 100.0,
+        "height": 80.0,
+        "bore_diameter": 14.0,
+        "slot_width": 12.6
+      },
+      "position": [-200, -100, 20],
+      "rotation": [0, 0, 0],
+      "quantity": 1
+    },
+    {
+      "id": "support_block_back",
+      "name": "Support Block (Back)",
+      "part_number": "PART-02",
+      "type": "support_block",
+      "parameters": {
+        "length": 100.0,
+        "width": 100.0,
+        "height": 80.0,
+        "bore_diameter": 14.0,
+        "slot_width": 12.6
+      },
+      "position": [200, -100, 20],
+      "rotation": [0, 0, 0],
+      "quantity": 1
+    },
+    {
+      "id": "stepped_shaft",
+      "name": "Stepped Shaft",
+      "part_number": "PART-03",
+      "type": "stepped_shaft",
+      "parameters": {
+        "diameter": 50.0,
+        "length": 50.0,
+        "shoulder_diameter": 40.0,
+        "shoulder_length": 20.0,
+        "keyway_width": 10.0
+      },
+      "position": [0, 150, 100],
+      "rotation": [0, 90, 0],
+      "quantity": 1
+    },
+    {
+      "id": "wheel",
+      "name": "Wheel",
+      "part_number": "PART-04",
+      "type": "wheel",
+      "parameters": {
+        "outer_diameter": 250.0,
+        "width": 30.0,
+        "bore_diameter": 40.0,
+        "keyway_width": 10.0,
+        "hub_length": 100.0
+      },
+      "position": [0, 150, 80],
+      "rotation": [0, 90, 0],
+      "quantity": 1
+    },
+    {
+      "id": "threaded_shaft",
+      "name": "Threaded Shaft",
+      "part_number": "PART-05",
+      "type": "threaded_shaft",
+      "parameters": {
+        "diameter": 20.0,
+        "length": 40.0,
+        "thread_length": 13.8
+      },
+      "position": [0, -150, 100],
+      "rotation": [0, 0, 0],
+      "quantity": 1
+    },
+    {
+      "id": "slotted_plate",
+      "name": "Slotted Plate",
+      "part_number": "PART-06",
+      "type": "slotted_plate",
+      "parameters": {
+        "length": 350.0,
+        "width": 50.0,
+        "height": 20.0,
+        "slot_width": 20.0,
+        "slot_depth": 25.0
+      },
+      "position": [0, 0, 50],
+      "rotation": [0, 0, 0],
+      "quantity": 1
+    },
+    {
+      "id": "side_block_left",
+      "name": "Side Block (Left)",
+      "part_number": "PART-07",
+      "type": "side_block",
+      "parameters": {
+        "length": 220.0,
+        "width": 135.0,
+        "top_cutout_width": 75.0,
+        "bore_diameter": 33.8,
+        "bore_height_from_base": 30.0,
+        "bottom_slot_width": 25.0,
+        "height": 115.0
+      },
+      "position": [-200, -100, 100],
+      "rotation": [0, 0, 0],
+      "quantity": 1
+    },
+    {
+      "id": "side_block_right",
+      "name": "Side Block (Right)",
+      "part_number": "PART-07",
+      "type": "side_block",
+      "parameters": {
+        "length": 220.0,
+        "width": 135.0,
+        "top_cutout_width": 75.0,
+        "bore_diameter": 33.8,
+        "bore_height_from_base": 30.0,
+        "bottom_slot_width": 25.0,
+        "height": 115.0
+      },
+      "position": [200, -100, 100],
+      "rotation": [0, 0, 0],
+      "quantity": 1
+    },
+    {
+      "id": "top_plate",
+      "name": "Top Plate",
+      "part_number": "PART-08",
+      "type": "top_plate",
+      "parameters": {
+        "length": 140.0,
+        "width": 100.0,
+        "height": 20.0,
+        "hole_diameter": 9.0,
+        "chamfer_size": 0.5
+      },
+      "position": [0, 0, 180],
+      "rotation": [0, 0, 0],
+      "quantity": 1
+    },
+    {
+      "id": "shaft_3",
+      "name": "Shaft 3 (Cylindrical Spacer)",
+      "part_number": "PART-09",
+      "type": "shaft_3",
+      "parameters": {
+        "outer_diameter": 25.0,
+        "length": 25.0,
+        "bore_diameter": 8.0
+      },
+      "position": [0, 0, 130],
+      "rotation": [0, 0, 0],
+      "quantity": 1
+    }
+  ],
+  "assembly_notes": "Complex 9-part assembly machine with rotating wheel mechanism on stepped shaft. Side blocks form main frame, wheel rotates on stepped shaft. Slotted plate serves as vertical connector. All edges chamfered 0.5x45 degrees.",
+  "material": "Steel",
+  "tolerance_basis": "ISO metric"
+}

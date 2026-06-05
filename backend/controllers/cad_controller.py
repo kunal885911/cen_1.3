@@ -11,6 +11,7 @@ from schemas.Lbracket_schema import LbracketParams
 from schemas.ubracket_schema import UbracketParams
 from schemas.flange_schema import FlangeParams
 from schemas.housing_schema import HousingParams
+from schemas.assembly_machine_params import AssemblyMachineParams
 from services.file_service import get_output_file_path
 from services.plate_service import generate_plate
 from services.shaft_service import generate_shaft
@@ -102,6 +103,13 @@ async def generate_housing_cad(params: HousingParams) -> GenerateResponse:
 @router.post("/plate/generate", response_model=GenerateResponse, status_code=status.HTTP_200_OK)
 async def generate_plate_cad(params: PlateParams) -> GenerateResponse:
     return await _process_cad_generation(generate_plate, params)
+
+
+@router.post("/assembly-machine/generate", response_model=GenerateResponse, status_code=status.HTTP_200_OK)
+async def generate_assembly_machine_cad(params: AssemblyMachineParams) -> GenerateResponse:
+    """Generate Assembly Machine (9-part complex geometry)"""
+    from services.assembly_machine_service import generate_assembly_machine
+    return await _process_cad_generation(generate_assembly_machine, params)
 
 
 @router.post("/assembly/generate", response_model=GenerateResponse, status_code=status.HTTP_200_OK)

@@ -1,4 +1,3 @@
-import cadquery as cq
 from pathlib import Path
 
 from assembly.mating import ConnectorMatcher
@@ -107,6 +106,7 @@ class Assembler:
         """
         Always produces all 3 outputs — no mode flag needed.
         """
+        import cadquery as cq
         import os
         from components.color_registry import get_color
         out_dir = Path(output_dir)

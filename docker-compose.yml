@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  assembly_machine:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    volumes:
+      - ./backend:/app
+    working_dir: /app
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python generate_assembly_docker.py assembly_machine.step
